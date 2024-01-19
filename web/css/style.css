@@ -22,7 +22,9 @@ footer {
   margin: auto;
 }
 
-.card {
+body {
+  background-color: red;
+}
   width:200px; 
   height: 700px; 
   margin-bottom: 20px

@@ -72,6 +72,7 @@ function getProducts(request, response) {
   // console.log(JSON.stringify(data, null, 2))
   response.status(200).send(data)
   console.log('API verstuurt /api/products/')
+  
 }
 
 function getProductById(request, response) {
