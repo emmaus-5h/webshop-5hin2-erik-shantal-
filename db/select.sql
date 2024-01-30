@@ -1,0 +1,1 @@
+SELECT id, code, name, description FROM products;

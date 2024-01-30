@@ -13,22 +13,42 @@ CREATE TABLE products (
   name VARCHAR(255),
   description TEXT,
   price NUMERIC(10, 2),
-  merk_id INTEGER,
-  kleur_id integer
+  merk_id INTEGER
+--  kleur_id integer
 );
 CREATE TABLE merk (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR (255)
   );
 
-CREATE TABLE kleur (
+--CREATE TABLE kleur (
+--  id INTEGER PRIMARY KEY AUTOINCREMENT,
+--  name VARCHAR (255)
+--  );
+
+CREATE TABLE colors (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
+  code VARCHAR(15),
+  name VARCHAR (255)
+);
+
+CREATE TABLE product_colors (
+  product_id  INTEGER REFERENCES products(id),
+  color_id    INTEGER REFERENCES colors(id),
+  PRIMARY KEY (product_id, color_id)
+);
+
+CREATE TABLE sizes (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  code VARCHAR(15),
   name VARCHAR (255)
   );
 
-
-  
-  
+CREATE TABLE product_sizes (
+  product_id  INTEGER REFERENCES products(id),
+  size_id     INTEGER REFERENCES sizes(id),
+  PRIMARY KEY (product_id, size_id)
+);
 
 --
 -- populate with data
@@ -39,25 +59,160 @@ CREATE TABLE kleur (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price, merk_id, kleur_id) values ('White Stussy T-shirt', 'White stussy T-shirt', '816905633-0', 10.5, 1, 1);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('Black Stussy Hoodie', 'Black Hoodie from Stussy', '077030122-3', 11, 1, 2);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('Black Stussy T-shirt', 'Black T-shirt made by stussy', '445924201-X', 13.5, 1, 2);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('White Stussy Hoodie', 'White hoodie from Stussy', '693155505-7', 13.5, 1, 1);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('Beige Blur Stussy T-shirt', 'Beige stussy shirt with blur design', '686928463-6', 14, 1, 3);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('Blue Blur Stussy T-shirt', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14, 1, 3);
+insert into products (name, description, code, price, merk_id) values ('BASIC STÜSSY TEE', 'Shortsleeve crewneck tee.', '816905633-0', 48, 1);
+insert into products (name, description, code, price, merk_id) values ('BASIC STÜSSY TEE', 'Shortsleeve crewneck tee.', '077030122-3', 48, 1);
+insert into products (name, description, code, price, merk_id) values ('STOCK LOGO SWEATPANT', '12.5oz dry hand fleece sweatpant.', '445924201-X', 13.5, 1);
+insert into products (name, description, code, price, merk_id) values ('White Stussy Hoodie', '12.5oz dry hand fleece sweatpant', '693155505-7', 13.5, 1);
+insert into products (name, description, code, price, merk_id) values ('Beige Blur Stussy T-shirt', 'Beige stussy shirt with blur design', '686928463-6', 14, 1);
+insert into products (name, description, code, price, merk_id) values ('Blue Blur Stussy T-shirt', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-8', 14, 1);
+insert into products (name, description, code, price, merk_id) values ('Blue Blur Stussy T-shirt', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-9', 14, 1);
+insert into products (name, description, code, price, merk_id) values ('Blue Blur Stussy T-shirt', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-10', 14, 1);
+insert into products (name, description, code, price, merk_id) values ('Blue Blur Stussy T-shirt', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-11', 14, 1);
+insert into products (name, description, code, price, merk_id) values ('Blue Blur Stussy T-shirt', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-12', 14, 1);
 
-insert into products (name, description, code, price, merk_id, kleur_id) values ('White Nike T-shirt', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id.', '816905633-0', 10.5, 2, 1);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('Black Nike Hoodie', 'Nulla ut erat id mauris vulputate elementum. Nullam varius.', '077030122-3', 11, 2, 2);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('Black Nike T-shirt', 'Pellentesque at nulla. Suspendisse potenti.', '445924201-X', 13.5, 2, 2);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('White Nike Hoodie', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 13.5, 2, 1);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('Black Nike Shorts', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14, 2, 2);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('White Nike Pants', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14, 2, 1);
 
 insert into merk (name) values ('Stussy');
 insert into merk (name) values ('Nike');
 insert into merk (name) values ('Adidas');
-
+/*
 insert into kleur (name) values ('white');
 insert into kleur (name) values ('black');
 insert into kleur (name) values ('blue');
 insert into kleur (name) values ('beige');
+*/
+
+INSERT INTO colors (code, name) VALUES ('W', 'white');
+INSERT INTO colors (code, name) VALUES ('B', 'black');
+INSERT INTO colors (code, name) VALUES ('G', 'grey');
+INSERT INTO colors (code, name) VALUES ('B', 'blue');
+INSERT INTO colors (code, name) VALUES ('P', 'pink');
+
+
+INSERT INTO sizes (code, name) VALUES ('XS', 'extra small');
+INSERT INTO sizes (code, name) VALUES ('S', 'small');
+INSERT INTO sizes (code, name) VALUES ('M', 'medium');
+INSERT INTO sizes (code, name) VALUES ('L', 'large');
+INSERT INTO sizes (code, name) VALUES ('XL', 'extra lagre');
+INSERT INTO sizes (code, name) VALUES ('XXL', 'extra extra lagre');
+
+INSERT INTO product_sizes (product_id, size_id) VALUES (1, 1);
+INSERT INTO product_sizes (product_id, size_id) VALUES (1, 2);
+INSERT INTO product_sizes (product_id, size_id) VALUES (1, 3);
+INSERT INTO product_sizes (product_id, size_id) VALUES (1, 4);
+INSERT INTO product_sizes (product_id, size_id) VALUES (1, 5);
+INSERT INTO product_sizes (product_id, size_id) VALUES (1, 6);
+INSERT INTO product_sizes (product_id, size_id) VALUES (2, 1);
+INSERT INTO product_sizes (product_id, size_id) VALUES (2, 2);
+INSERT INTO product_sizes (product_id, size_id) VALUES (2, 3);
+INSERT INTO product_sizes (product_id, size_id) VALUES (2, 4);
+INSERT INTO product_sizes (product_id, size_id) VALUES (2, 5);
+INSERT INTO product_sizes (product_id, size_id) VALUES (2, 6);
+INSERT INTO product_sizes (product_id, size_id) VALUES (3, 1);
+INSERT INTO product_sizes (product_id, size_id) VALUES (3, 2);
+INSERT INTO product_sizes (product_id, size_id) VALUES (3, 3);
+INSERT INTO product_sizes (product_id, size_id) VALUES (3, 4);
+INSERT INTO product_sizes (product_id, size_id) VALUES (3, 5);
+INSERT INTO product_sizes (product_id, size_id) VALUES (3, 6);
+INSERT INTO product_sizes (product_id, size_id) VALUES (4, 1);
+INSERT INTO product_sizes (product_id, size_id) VALUES (4, 2);
+INSERT INTO product_sizes (product_id, size_id) VALUES (4, 3);
+INSERT INTO product_sizes (product_id, size_id) VALUES (4, 4);
+INSERT INTO product_sizes (product_id, size_id) VALUES (4, 5);
+INSERT INTO product_sizes (product_id, size_id) VALUES (4, 6);
+INSERT INTO product_sizes (product_id, size_id) VALUES (5, 1);
+INSERT INTO product_sizes (product_id, size_id) VALUES (5, 2);
+INSERT INTO product_sizes (product_id, size_id) VALUES (5, 3);
+INSERT INTO product_sizes (product_id, size_id) VALUES (5, 4);
+INSERT INTO product_sizes (product_id, size_id) VALUES (5, 5);
+INSERT INTO product_sizes (product_id, size_id) VALUES (5, 6);
+INSERT INTO product_sizes (product_id, size_id) VALUES (6, 1);
+INSERT INTO product_sizes (product_id, size_id) VALUES (6, 2);
+INSERT INTO product_sizes (product_id, size_id) VALUES (6, 3);
+INSERT INTO product_sizes (product_id, size_id) VALUES (6, 4);
+INSERT INTO product_sizes (product_id, size_id) VALUES (6, 5);
+INSERT INTO product_sizes (product_id, size_id) VALUES (6, 6);
+INSERT INTO product_sizes (product_id, size_id) VALUES (7, 1);
+INSERT INTO product_sizes (product_id, size_id) VALUES (7, 2);
+INSERT INTO product_sizes (product_id, size_id) VALUES (7, 3);
+INSERT INTO product_sizes (product_id, size_id) VALUES (7, 4);
+INSERT INTO product_sizes (product_id, size_id) VALUES (7, 5);
+INSERT INTO product_sizes (product_id, size_id) VALUES (7, 6);
+INSERT INTO product_sizes (product_id, size_id) VALUES (8, 1);
+INSERT INTO product_sizes (product_id, size_id) VALUES (8, 2);
+INSERT INTO product_sizes (product_id, size_id) VALUES (8, 3);
+INSERT INTO product_sizes (product_id, size_id) VALUES (8, 4);
+INSERT INTO product_sizes (product_id, size_id) VALUES (8, 5);
+INSERT INTO product_sizes (product_id, size_id) VALUES (8, 6);
+INSERT INTO product_sizes (product_id, size_id) VALUES (9, 1);
+INSERT INTO product_sizes (product_id, size_id) VALUES (9, 2);
+INSERT INTO product_sizes (product_id, size_id) VALUES (9, 3);
+INSERT INTO product_sizes (product_id, size_id) VALUES (9, 4);
+INSERT INTO product_sizes (product_id, size_id) VALUES (9, 5);
+INSERT INTO product_sizes (product_id, size_id) VALUES (9, 6);
+INSERT INTO product_sizes (product_id, size_id) VALUES (10, 1);
+INSERT INTO product_sizes (product_id, size_id) VALUES (10, 2);
+INSERT INTO product_sizes (product_id, size_id) VALUES (10, 3);
+INSERT INTO product_sizes (product_id, size_id) VALUES (10, 4);
+INSERT INTO product_sizes (product_id, size_id) VALUES (10, 5);
+INSERT INTO product_sizes (product_id, size_id) VALUES (10, 6);
+
+INSERT INTO product_colors (product_id, color_id) VALUES (1, 1);
+--INSERT INTO product_colors (product_id, color_id) VALUES (1, 2);
+--INSERT INTO product_colors (product_id, color_id) VALUES (1, 3);
+--INSERT INTO product_colors (product_id, color_id) VALUES (1, 4);
+--INSERT INTO product_colors (product_id, color_id) VALUES (1, 5);
+--INSERT INTO product_colors (product_id, color_id) VALUES (1, 6);
+INSERT INTO product_colors (product_id, color_id) VALUES (2, 1);
+INSERT INTO product_colors (product_id, color_id) VALUES (2, 2);
+INSERT INTO product_colors (product_id, color_id) VALUES (2, 3);
+INSERT INTO product_colors (product_id, color_id) VALUES (2, 4);
+INSERT INTO product_colors (product_id, color_id) VALUES (2, 5);
+INSERT INTO product_colors (product_id, color_id) VALUES (2, 6);
+INSERT INTO product_colors (product_id, color_id) VALUES (3, 1);
+INSERT INTO product_colors (product_id, color_id) VALUES (3, 2);
+INSERT INTO product_colors (product_id, color_id) VALUES (3, 3);
+INSERT INTO product_colors (product_id, color_id) VALUES (3, 4);
+INSERT INTO product_colors (product_id, color_id) VALUES (3, 5);
+INSERT INTO product_colors (product_id, color_id) VALUES (3, 6);
+INSERT INTO product_colors (product_id, color_id) VALUES (4, 1);
+INSERT INTO product_colors (product_id, color_id) VALUES (4, 2);
+INSERT INTO product_colors (product_id, color_id) VALUES (4, 3);
+INSERT INTO product_colors (product_id, color_id) VALUES (4, 4);
+INSERT INTO product_colors (product_id, color_id) VALUES (4, 5);
+INSERT INTO product_colors (product_id, color_id) VALUES (4, 6);
+INSERT INTO product_colors (product_id, color_id) VALUES (5, 1);
+INSERT INTO product_colors (product_id, color_id) VALUES (5, 2);
+INSERT INTO product_colors (product_id, color_id) VALUES (5, 3);
+INSERT INTO product_colors (product_id, color_id) VALUES (5, 4);
+INSERT INTO product_colors (product_id, color_id) VALUES (5, 5);
+INSERT INTO product_colors (product_id, color_id) VALUES (5, 6);
+INSERT INTO product_colors (product_id, color_id) VALUES (6, 1);
+INSERT INTO product_colors (product_id, color_id) VALUES (6, 2);
+INSERT INTO product_colors (product_id, color_id) VALUES (6, 3);
+INSERT INTO product_colors (product_id, color_id) VALUES (6, 4);
+INSERT INTO product_colors (product_id, color_id) VALUES (6, 5);
+INSERT INTO product_colors (product_id, color_id) VALUES (6, 6);
+INSERT INTO product_colors (product_id, color_id) VALUES (7, 1);
+INSERT INTO product_colors (product_id, color_id) VALUES (7, 2);
+INSERT INTO product_colors (product_id, color_id) VALUES (7, 3);
+INSERT INTO product_colors (product_id, color_id) VALUES (7, 4);
+INSERT INTO product_colors (product_id, color_id) VALUES (7, 5);
+INSERT INTO product_colors (product_id, color_id) VALUES (7, 6);
+INSERT INTO product_colors (product_id, color_id) VALUES (8, 1);
+INSERT INTO product_colors (product_id, color_id) VALUES (8, 2);
+INSERT INTO product_colors (product_id, color_id) VALUES (8, 3);
+INSERT INTO product_colors (product_id, color_id) VALUES (8, 4);
+INSERT INTO product_colors (product_id, color_id) VALUES (8, 5);
+INSERT INTO product_colors (product_id, color_id) VALUES (8, 6);
+INSERT INTO product_colors (product_id, color_id) VALUES (9, 1);
+INSERT INTO product_colors (product_id, color_id) VALUES (9, 2);
+INSERT INTO product_colors (product_id, color_id) VALUES (9, 3);
+INSERT INTO product_colors (product_id, color_id) VALUES (9, 4);
+INSERT INTO product_colors (product_id, color_id) VALUES (9, 5);
+INSERT INTO product_colors (product_id, color_id) VALUES (9, 6);
+INSERT INTO product_colors (product_id, color_id) VALUES (10, 1);
+INSERT INTO product_colors (product_id, color_id) VALUES (10, 2);
+INSERT INTO product_colors (product_id, color_id) VALUES (10, 3);
+INSERT INTO product_colors (product_id, color_id) VALUES (10, 4);
+INSERT INTO product_colors (product_id, color_id) VALUES (10, 5);
+INSERT INTO product_colors (product_id, color_id) VALUES (10, 6);
