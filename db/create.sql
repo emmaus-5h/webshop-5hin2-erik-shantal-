@@ -39,11 +39,11 @@ CREATE TABLE kleur (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price, merk_id, kleur_id) values ('White Stussy T-shirt', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id.', '816905633-0', 10.5, 1, 1);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('Black Stussy Hoodie', 'Nulla ut erat id mauris vulputate elementum. Nullam varius.', '077030122-3', 11, 1, 2);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('Black Stussy T-shirt', 'Pellentesque at nulla. Suspendisse potenti.', '445924201-X', 13.5, 1, 2);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('White Stussy Hoodie', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 13.5, 1, 1);
-insert into products (name, description, code, price, merk_id, kleur_id) values ('Beige Blur Stussy T-shirt', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14, 1, 3);
+insert into products (name, description, code, price, merk_id, kleur_id) values ('White Stussy T-shirt', 'White stussy T-shirt', '816905633-0', 10.5, 1, 1);
+insert into products (name, description, code, price, merk_id, kleur_id) values ('Black Stussy Hoodie', 'Black Hoodie from Stussy', '077030122-3', 11, 1, 2);
+insert into products (name, description, code, price, merk_id, kleur_id) values ('Black Stussy T-shirt', 'Black T-shirt made by stussy', '445924201-X', 13.5, 1, 2);
+insert into products (name, description, code, price, merk_id, kleur_id) values ('White Stussy Hoodie', 'White hoodie from Stussy', '693155505-7', 13.5, 1, 1);
+insert into products (name, description, code, price, merk_id, kleur_id) values ('Beige Blur Stussy T-shirt', 'Beige stussy shirt with blur design', '686928463-6', 14, 1, 3);
 insert into products (name, description, code, price, merk_id, kleur_id) values ('Blue Blur Stussy T-shirt', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14, 1, 3);
 
 insert into products (name, description, code, price, merk_id, kleur_id) values ('White Nike T-shirt', 'Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id.', '816905633-0', 10.5, 2, 1);
