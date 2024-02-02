@@ -75,4 +75,31 @@ body {
   width: 25%;
   float: left;
 }
+nav ul {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    background-color: #ff0000;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #6b6b6b;
+}
+
+nav li a.active {
+    background-color: #8e928b;
+}
 
