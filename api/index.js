@@ -175,6 +175,7 @@ function checkoutOrder(request, response) {
 
   // maak tabel met info uit database over producten uit winkelmand
   var totaalBedrag = 0;
+  
   var articleTable = "<table>"
   articleTable += "<tr><th>Id</th><th>Code</th><th>Naam</th><th>Prijs per stuk</th><th>Aantal</th><th>Aantal * prijs</th></tr>"
   for (let i in productIds) { // herhaal voor elke index van productIds[]
@@ -187,6 +188,7 @@ function checkoutOrder(request, response) {
   }
   articleTable += `<tr><td colspan="5">Totaal</td><td>€ ${totaalBedrag.toFixed(2)}</td><tr>`
   articleTable += "</table>"
+
 
   // maak inhoud van mailbericht
   var body = `<html><body>Hi<br><br>Bedankt voor je bestelling met nummer <b>${orderId}</b><br><br>\n` +
