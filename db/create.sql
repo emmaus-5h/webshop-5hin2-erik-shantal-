@@ -72,7 +72,7 @@ insert into products (name, description, code, price, merk_id) values ('Blue Blu
 
 
 insert into merk (name) values ('Stussy');
-insert into merk (name) values ('Nike');
+insert into merk (name) values ('Bape');
 insert into merk (name) values ('Adidas');
 /*
 insert into kleur (name) values ('white');
