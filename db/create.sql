@@ -60,15 +60,15 @@ CREATE TABLE product_sizes (
 --
 
 insert into products (name, description, code, price, merk_id) values ('BASIC STÜSSY TEE', 'Shortsleeve crewneck tee.', '816905633-0', 48, 1);
-insert into products (name, description, code, price, merk_id) values ('BASIC STÜSSY TEE', 'Shortsleeve crewneck tee.', '077030122-3', 48, 1);
-insert into products (name, description, code, price, merk_id) values ('STOCK LOGO SWEATPANT', '12.5oz dry hand fleece sweatpant.', '445924201-X', 13.5, 1);
-insert into products (name, description, code, price, merk_id) values ('White Stussy Hoodie', '12.5oz dry hand fleece sweatpant', '693155505-7', 13.5, 1);
-insert into products (name, description, code, price, merk_id) values ('Beige Blur Stussy T-shirt', 'Beige stussy shirt with blur design', '686928463-6', 14, 1);
-insert into products (name, description, code, price, merk_id) values ('Blue Blur Stussy T-shirt', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-8', 14, 1);
-insert into products (name, description, code, price, merk_id) values ('Blue Blur Stussy T-shirt', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-9', 14, 1);
-insert into products (name, description, code, price, merk_id) values ('Blue Blur Stussy T-shirt', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-10', 14, 1);
-insert into products (name, description, code, price, merk_id) values ('Blue Blur Stussy T-shirt', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-11', 14, 1);
-insert into products (name, description, code, price, merk_id) values ('Blue Blur Stussy T-shirt', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-12', 14, 1);
+insert into products (name, description, code, price, merk_id) values ('DOBERMANS TEE', 'Oversized tee in piece dyed cotton with screenprinted graphics', '077030122-3', 48, 1);
+insert into products (name, description, code, price, merk_id) values ('LOCATIONS TEE PIGMENT DYED', 'Oversized pigment dyed tee in midweight 6.5oz cotton jersey. Features screenprinted graphics.
+', '686928463-6', 48, 1);
+insert into products (name, description, code, price, merk_id) values ('TOUGH GEAR TEE', 'Oversized tee in piece dyed cotton with screenprinted graphics.', '492662523-8', 48, 1);
+insert into products (name, description, code, price, merk_id) values ('Hand Draw Ape Head Crewnec', 'Material: Shell 85% cotton; 15% polyester; Trimming 100% cotton.', '492662523-11', 340, 2);
+insert into products (name, description, code, price, merk_id) values ('Liquid Camo Shark Full Zip Hoodie', 'Material: Shell 80% cotton; 20% polyester.', '492662523-12', 552, 2);
+
+
+
 
 
 insert into merk (name) values ('Stussy');

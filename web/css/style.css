@@ -23,7 +23,7 @@ footer {
 }
 
 body {
-  background-color: red;
+  background-color:darkred;
 }
   width:200px; 
   height: 700px; 
@@ -79,7 +79,7 @@ nav ul {
     list-style-type: none;
     margin: auto;
     padding: 0;
-    background-color: #ff0000;
+    background-color: black;
     overflow: hidden;
 }
 
