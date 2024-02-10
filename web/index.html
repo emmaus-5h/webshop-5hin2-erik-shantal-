@@ -37,11 +37,12 @@
 	</nav>
   <nav>
     <ul>
-      <li><a class="active" href="index.html">Artikelen</a></li>
+       <!--      <li><a class="active" href="index.html">Artikelen</a></li> -->
+      
       <li><a href="Stussy.html">STÜSSY</a></li>
       <li><a href="Bape.html">BAPE</a></li>
-      <li><a href="andermerk1.html">1</a></li>
-      <li><a href="andermerk2.html">2</a></li>
+      <li><a href="andermerk1.html">Merk C</a></li>
+      <li><a href="andermerk2.html">Merk D</a></li>
     </ul>
   </nav>
   <!-- lijst met producten, wordt gevuld door javascript -->
@@ -133,8 +134,9 @@
               clone.querySelector(".product_id").value = product.id
               clone.querySelector(".product_id").dataset.json = JSON.stringify(product)
               clone.querySelector(".product_image").src =`/images/${product.id}.jpg`
-              container.appendChild(clone)
-            }
+              container.appendChild(clone)               
+            
+            
           }
 	</script>
 
