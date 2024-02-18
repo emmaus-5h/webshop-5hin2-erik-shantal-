@@ -66,6 +66,10 @@ insert into products (name, description, code, price, merk_id) values ('LOCATION
 insert into products (name, description, code, price, merk_id) values ('TOUGH GEAR TEE', 'Oversized tee in piece dyed cotton with screenprinted graphics.', '492662523-8', 48, 1);
 insert into products (name, description, code, price, merk_id) values ('Hand Draw Ape Head Crewnec', 'Material: Shell 85% cotton; 15% polyester; Trimming 100% cotton.', '492662523-11', 340, 2);
 insert into products (name, description, code, price, merk_id) values ('Liquid Camo Shark Full Zip Hoodie', 'Material: Shell 80% cotton; 20% polyester.', '492662523-12', 552, 2);
+insert into products (name, description, code, price, merk_id) values ('Black Nike Hyverse', 'Dri-FIT UV multifunctionele herentop met korte mouwen', '492662523-13', 38, 3);
+insert into products (name, description, code, price, merk_id) values ('Jordan Brooklyn Fleece', 'Sweatshirt met ronde hals voor heren', '492662523-14', 65, 3);	
+insert into products (name, description, code, price, merk_id) values ('Brooklyn Nets Standard Issue', 'Nike Dri-FIT NBA-hoodie voor dames', '492662523-15', 90, 3);
+insert into products (name, description, code, price, merk_id) values ('VINTAGE 90S NIKE SPELLOUT SWEATSHIRT IN WHITE', 'old school nike sweatshirt','492662523-16', 202, 3);
 
 
 
@@ -73,7 +77,7 @@ insert into products (name, description, code, price, merk_id) values ('Liquid C
 
 insert into merk (name) values ('Stussy');
 insert into merk (name) values ('Bape');
-insert into merk (name) values ('Adidas');
+insert into merk (name) values ('Nike');
 /*
 insert into kleur (name) values ('white');
 insert into kleur (name) values ('black');

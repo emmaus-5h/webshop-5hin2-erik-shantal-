@@ -102,4 +102,11 @@ nav li a:hover {
 nav li a.active {
     background-color: #8e928b;
 }
-
+ .bg {
+  background-image: url("images/informticva.jpg") ;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   background-blend-mode:overlay;
+ }
